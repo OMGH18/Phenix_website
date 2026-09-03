@@ -6,43 +6,43 @@
 
 /* =========================================================
    Design tokens — identité « Phénix »
-   navy  : profondeur, confiance, professionnalisme
-   ember : le phénix qui renaît (accent chaud)
-   aqua  : l'eau, l'assainissement, la propreté
+   navy  : vert profond, confiance, professionnalisme
+   ember : l'or du phénix (accent principal)
+   aqua  : détails verts et dorés, fraîcheur, propreté
    ========================================================= */
 @theme {
   --font-display: "Sora Variable", ui-sans-serif, system-ui, sans-serif;
   --font-sans: "Inter Variable", ui-sans-serif, system-ui, sans-serif;
 
-  --color-navy-50: #eef4fb;
-  --color-navy-100: #d6e4f5;
-  --color-navy-200: #adc8ea;
-  --color-navy-300: #7ba3d8;
-  --color-navy-400: #4a7bc0;
-  --color-navy-500: #2f5da3;
-  --color-navy-600: #244a86;
-  --color-navy-700: #1d3c6d;
-  --color-navy-800: #16305a;
-  --color-navy-900: #0f2244;
-  --color-navy-950: #0a1628;
+  --color-navy-50: #f1f7f2;
+  --color-navy-100: #dcecdf;
+  --color-navy-200: #b9d8c0;
+  --color-navy-300: #8fbd9d;
+  --color-navy-400: #5f9b78;
+  --color-navy-500: #3f7c5b;
+  --color-navy-600: #2f6549;
+  --color-navy-700: #245039;
+  --color-navy-800: #193e2c;
+  --color-navy-900: #102f22;
+  --color-navy-950: #081d14;
 
-  --color-ember-50: #fff7ed;
-  --color-ember-100: #ffedd5;
-  --color-ember-200: #fed7aa;
-  --color-ember-300: #fdba74;
-  --color-ember-400: #fb923c;
-  --color-ember-500: #f97316;
-  --color-ember-600: #ea580c;
-  --color-ember-700: #c2410c;
-  --color-gold: #fbbf24;
+  --color-ember-50: #fbf5e7;
+  --color-ember-100: #eee0b8;
+  --color-ember-200: #dfc77e;
+  --color-ember-300: #d1aa46;
+  --color-ember-400: #bd8d22;
+  --color-ember-500: #a97916;
+  --color-ember-600: #8a5f0d;
+  --color-ember-700: #68450b;
+  --color-gold: #d4ad45;
 
-  --color-aqua-300: #67e8f9;
-  --color-aqua-400: #22d3ee;
-  --color-aqua-500: #06b6d4;
-  --color-aqua-600: #0891b2;
-  --color-teal-500: #14b8a6;
+  --color-aqua-300: #e0c477;
+  --color-aqua-400: #c9a343;
+  --color-aqua-500: #9b771e;
+  --color-aqua-600: #755715;
+  --color-teal-500: #3d8963;
 
-  --shadow-glow: 0 0 60px -15px rgba(249, 115, 22, 0.45);
+  --shadow-glow: 0 0 60px -15px rgba(198, 162, 39, 0.45);
   --shadow-card: 0 20px 40px -24px rgba(10, 22, 40, 0.35);
 
   --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
@@ -59,6 +59,27 @@
   0% { background-position: -200% center; }
   100% { background-position: 200% center; }
 }
+@keyframes aurora-shift {
+  0% { background-position: 0% 0%; }
+  100% { background-position: 12% 8%; }
+}
+@keyframes grid-pan {
+  0% { background-position: 0 0, 0 0; }
+  100% { background-position: 56px 28px, 28px 56px; }
+}
+@keyframes ring-expand {
+  0% { transform: scale(0.35); opacity: 0; }
+  20% { opacity: 0.5; }
+  75%, 100% { transform: scale(1.15); opacity: 0; }
+}
+@keyframes spark-float {
+  0%, 100% { transform: translate3d(0, 8px, 0); opacity: 0.2; }
+  50% { transform: translate3d(0, -14px, 0); opacity: 0.9; }
+}
+@keyframes surface-drift {
+  0% { transform: rotate(-4deg) translate3d(-8px, 6px, 0); }
+  100% { transform: rotate(3deg) translate3d(8px, -6px, 0); }
+}
 
 /* =========================================================
    Base
@@ -74,6 +95,10 @@
     font-family: var(--font-sans);
     background-color: var(--color-navy-950);
     color: #e6edf6;
+    overflow-x: hidden;
+  }
+  section {
+    scroll-margin-top: 5.5rem;
   }
   h1, h2, h3, h4 {
     font-family: var(--font-display);
@@ -94,6 +119,17 @@
    Composants réutilisables
    ========================================================= */
 @layer components {
+  .scroll-progress {
+    position: fixed;
+    inset: 0 auto auto 0;
+    z-index: 60;
+    width: var(--scroll-progress, 0%);
+    height: 3px;
+    background: linear-gradient(90deg, var(--color-ember-400), var(--color-gold));
+    box-shadow: 0 0 18px rgba(189, 141, 34, 0.7);
+    transition: width 120ms linear;
+  }
+
   .container-x {
     @apply mx-auto w-full max-w-7xl px-5 sm:px-8;
   }
@@ -101,16 +137,16 @@
   .btn,
   .btn-primary,
   .btn-ghost {
-    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3.5
+    @apply inline-flex items-center justify-center gap-2 rounded-xl px-6 py-3.5
            text-sm font-semibold tracking-wide transition-all duration-300
            will-change-transform;
   }
   .btn-primary {
-    @apply text-white shadow-[0_10px_30px_-8px_rgba(249,115,22,0.6)];
+    @apply text-navy-950 shadow-[0_10px_30px_-8px_rgba(169,121,22,0.6)];
     background-image: linear-gradient(120deg, var(--color-ember-500), var(--color-gold));
   }
   .btn-primary:hover {
-    @apply -translate-y-0.5 shadow-[0_16px_40px_-8px_rgba(249,115,22,0.7)];
+    @apply -translate-y-0.5 shadow-[0_16px_40px_-8px_rgba(169,121,22,0.7)];
     filter: saturate(1.15);
   }
   .btn-ghost {
@@ -128,20 +164,29 @@
     color: transparent;
   }
 
-  .eyebrow {
-    @apply inline-flex items-center gap-2 rounded-full border border-white/10
-           bg-white/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em]
-           text-aqua-300;
+  .section-kicker {
+    @apply inline-flex items-center gap-2 border-l-2 border-ember-400 pl-3
+           text-xs font-semibold uppercase tracking-[0.2em] text-aqua-300;
+  }
+
+  .section-kicker::after {
+    content: '';
+    width: 2.5rem;
+    height: 1px;
+    margin-left: 0.35rem;
+    background: linear-gradient(90deg, var(--color-ember-400), transparent);
   }
 
   /* Carte en verre dépoli */
   .glass-card {
-    @apply relative rounded-2xl border border-white/10 bg-white/[0.04] p-7
+    @apply relative rounded-2xl border border-white/[0.12] bg-white/[0.055] p-7
            backdrop-blur-sm transition-all duration-500;
     box-shadow: var(--shadow-card);
+    will-change: transform;
   }
   .glass-card:hover {
-    @apply -translate-y-1 border-white/20 bg-white/[0.06];
+    @apply -translate-y-1 border-ember-400/40 bg-white/[0.085];
+    box-shadow: 0 22px 45px -28px rgba(0, 0, 0, 0.85), 0 0 0 1px rgba(212, 173, 69, 0.1);
   }
 
   /* Filet dégradé décoratif */
@@ -158,6 +203,17 @@
   [data-header].is-scrolled {
     @apply border-b border-white/10 bg-navy-950/80 backdrop-blur-xl;
     box-shadow: 0 10px 30px -20px rgba(0, 0, 0, 0.6);
+  }
+
+  input,
+  select,
+  textarea {
+    @apply transition-colors duration-200;
+  }
+  input:hover,
+  select:hover,
+  textarea:hover {
+    @apply border-white/25;
   }
 
   /* Accordéon FAQ */
@@ -184,9 +240,11 @@
   /* Fond radial « aurore » réutilisable */
   .bg-aurora {
     background:
-      radial-gradient(60% 55% at 15% 0%, rgba(249, 115, 22, 0.18), transparent 60%),
-      radial-gradient(50% 50% at 90% 15%, rgba(6, 182, 212, 0.16), transparent 60%),
-      radial-gradient(70% 60% at 50% 110%, rgba(29, 60, 109, 0.55), transparent 70%);
+      radial-gradient(60% 55% at 15% 0%, rgba(198, 162, 39, 0.18), transparent 60%),
+      radial-gradient(50% 50% at 90% 15%, rgba(61, 137, 99, 0.18), transparent 60%),
+      radial-gradient(70% 60% at 50% 110%, rgba(36, 80, 57, 0.55), transparent 70%);
+    background-size: 120% 120%;
+    animation: aurora-shift 18s ease-in-out infinite alternate;
   }
 
   .grid-lines {
@@ -198,6 +256,65 @@
     mask-image: radial-gradient(circle at 50% 40%, black, transparent 78%);
   }
 
+  .parallax-orb {
+    transform: translate3d(0, var(--parallax-y, 0px), 0);
+    transition: transform 180ms linear;
+  }
+
+  .grid-lines {
+    animation: grid-pan 20s linear infinite;
+  }
+
+  .hero-visual::after {
+    content: '';
+    position: absolute;
+    inset: 15% 12%;
+    border: 1px solid rgba(212, 173, 69, 0.16);
+    border-radius: 1.5rem;
+    transform: rotate(-4deg);
+    animation: surface-drift 9s ease-in-out infinite alternate;
+  }
+
+  .water-rings {
+    position: absolute;
+    width: 13rem;
+    height: 13rem;
+    border: 1px solid rgba(212, 173, 69, 0.2);
+    border-radius: 50%;
+  }
+  .water-rings span {
+    position: absolute;
+    inset: 15%;
+    border: 1px solid rgba(212, 173, 69, 0.25);
+    border-radius: 50%;
+    animation: ring-expand 5s ease-out infinite;
+  }
+  .water-rings span:nth-child(2) { animation-delay: 1.6s; }
+  .water-rings span:nth-child(3) { animation-delay: 3.2s; }
+
+  .visual-spark {
+    position: absolute;
+    width: 0.35rem;
+    height: 0.35rem;
+    border-radius: 50%;
+    background: var(--color-gold);
+    box-shadow: 0 0 14px rgba(212, 173, 69, 0.75);
+    animation: spark-float 4s ease-in-out infinite;
+  }
+  .spark-one { top: 27%; left: 28%; }
+  .spark-two { top: 62%; right: 26%; animation-delay: 1.3s; }
+  .spark-three { bottom: 23%; left: 42%; animation-delay: 2.5s; }
+
+  .section-glow {
+    position: absolute;
+    pointer-events: none;
+    width: 30rem;
+    height: 30rem;
+    border-radius: 9999px;
+    background: radial-gradient(circle, rgba(169, 121, 22, 0.1), transparent 68%);
+    filter: blur(10px);
+  }
+
   /* Révélation au scroll (piloté par IntersectionObserver) */
   .reveal {
     opacity: 0;
@@ -207,6 +324,15 @@
   .reveal.is-visible {
     opacity: 1;
     transform: none;
+  }
+
+  @keyframes status-pulse {
+    0%, 100% { opacity: 0.55; transform: scale(0.9); }
+    50% { opacity: 1; transform: scale(1.15); }
+  }
+
+  [data-header] .bg-emerald-400 {
+    animation: status-pulse 2.4s ease-in-out infinite;
   }
 
   .shimmer-text {

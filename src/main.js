@@ -12,6 +12,23 @@ window.addEventListener('scroll', onScroll, { passive: true })
 onScroll()
 
 /* -------------------------------------------------------
+   1b. Progression de lecture + profondeur du hero
+   ------------------------------------------------------- */
+const progressBar = document.querySelector('[data-scroll-progress]')
+const parallaxOrbs = document.querySelectorAll('[data-parallax]')
+const updateMotion = () => {
+  const maxScroll = document.documentElement.scrollHeight - window.innerHeight
+  const progress = maxScroll > 0 ? (window.scrollY / maxScroll) * 100 : 0
+  progressBar?.style.setProperty('--scroll-progress', `${progress}%`)
+  parallaxOrbs.forEach((orb) => {
+    const speed = Number(orb.dataset.parallax || 0)
+    orb.style.setProperty('--parallax-y', `${window.scrollY * speed}px`)
+  })
+}
+window.addEventListener('scroll', updateMotion, { passive: true })
+updateMotion()
+
+/* -------------------------------------------------------
    2. Menu mobile
    ------------------------------------------------------- */
 const menuBtn = document.querySelector('[data-menu-btn]')
@@ -27,6 +44,23 @@ menuBtn?.addEventListener('click', () => toggleMenu())
 mobileMenu?.querySelectorAll('a').forEach((a) =>
   a.addEventListener('click', () => toggleMenu(false)),
 )
+
+/* -------------------------------------------------------
+   2b. Micro-interaction de profondeur sur les cartes
+   ------------------------------------------------------- */
+if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  document.querySelectorAll('article.glass-card, [data-faq]').forEach((card) => {
+    card.addEventListener('pointermove', (event) => {
+      const rect = card.getBoundingClientRect()
+      const x = (event.clientX - rect.left) / rect.width - 0.5
+      const y = (event.clientY - rect.top) / rect.height - 0.5
+      card.style.transform = `perspective(900px) rotateX(${-y * 2}deg) rotateY(${x * 2}deg) translateY(-4px)`
+    })
+    card.addEventListener('pointerleave', () => {
+      card.style.transform = ''
+    })
+  })
+}
 
 /* -------------------------------------------------------
    3. Révélation au scroll

@@ -50,6 +50,7 @@
   </head>
 
   <body class="antialiased">
+    <div data-scroll-progress class="scroll-progress" aria-hidden="true"></div>
     <!-- Lien d'évitement (accessibilité) -->
     <a
       href="#contenu"
@@ -122,13 +123,13 @@
       <section id="accueil" class="relative overflow-hidden bg-navy-950 bg-aurora">
         <div class="absolute inset-0 grid-lines" aria-hidden="true"></div>
         <!-- Blobs décoratifs -->
-        <div class="pointer-events-none absolute -left-40 top-20 h-96 w-96 rounded-full bg-ember-500/20 blur-3xl" aria-hidden="true"></div>
-        <div class="pointer-events-none absolute -right-40 top-40 h-96 w-96 rounded-full bg-aqua-500/20 blur-3xl" aria-hidden="true"></div>
+        <div data-parallax="0.12" class="parallax-orb pointer-events-none absolute -left-40 top-20 h-96 w-96 rounded-full bg-ember-500/20 blur-3xl" aria-hidden="true"></div>
+        <div data-parallax="-0.08" class="parallax-orb pointer-events-none absolute -right-40 top-40 h-96 w-96 rounded-full bg-aqua-500/20 blur-3xl" aria-hidden="true"></div>
 
         <div class="container-x relative grid gap-16 pb-24 pt-36 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:pb-32 lg:pt-44">
           <!-- Texte -->
           <div>
-            <span class="eyebrow reveal">
+            <span class="section-kicker reveal">
               <span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span>
               Disponible maintenant · Urgences 24h/24
             </span>
@@ -166,10 +167,14 @@
           <div class="reveal relative" data-delay="200">
             <div class="glass-card overflow-hidden !p-0">
               <!-- Zone image (⚠️ remplacer par une vraie photo : camion / intervention) -->
-              <div class="relative flex aspect-[4/3] items-center justify-center overflow-hidden bg-gradient-to-br from-navy-800 to-navy-950">
+              <div class="hero-visual relative flex aspect-[4/3] items-center justify-center overflow-hidden bg-gradient-to-br from-navy-800 to-navy-950">
                 <div class="absolute inset-0 grid-lines opacity-60"></div>
+                <div class="water-rings" aria-hidden="true"><span></span><span></span><span></span></div>
+                <div class="visual-spark spark-one" aria-hidden="true"></div>
+                <div class="visual-spark spark-two" aria-hidden="true"></div>
+                <div class="visual-spark spark-three" aria-hidden="true"></div>
                 <svg viewBox="0 0 24 24" class="animate-[float_6s_ease-in-out_infinite] h-28 w-28 text-white/10" fill="currentColor"><path d="M12 2c.6 2.4-.3 4-1.6 5.2 1 .2 2-.1 2.9-.9-.2 1.7-1 2.7-2 3.4 1.3.3 2.6-.1 3.8-1.1.4 2.2-.6 3.9-2 5.1 1.6.2 3-.5 4.2-1.8.1 3.2-1.8 5.9-4.6 7.2 1.7.5 3.4.2 5-.9-1.1 2.9-4 4.6-7.7 4.6C7 27.9 3.2 24 3.2 19.1c0-2.7 1.2-4.9 3-6.7C7.9 10.7 9 8.9 9 6.7 9 4.9 8.2 3.4 7 2.4 9.4 2.2 11 3 12 4.3 12 3.4 12 2.7 12 2Z"/></svg>
-                <span class="absolute bottom-4 left-4 rounded-full bg-black/30 px-3 py-1 text-xs font-medium text-white/60 backdrop-blur">Photo à insérer</span>
+                <span class="absolute bottom-4 left-4 text-xs font-medium text-white/45">Photo à insérer</span>
               </div>
             </div>
 
@@ -226,7 +231,7 @@
       <section id="services" class="relative bg-navy-900 py-24 lg:py-32">
         <div class="container-x">
           <div class="mx-auto max-w-2xl text-center">
-            <span class="eyebrow reveal">Nos prestations</span>
+            <span class="section-kicker reveal">Nos prestations</span>
             <h2 class="reveal mt-5 font-display text-3xl font-bold text-white sm:text-4xl lg:text-5xl" data-delay="80">
               Une réponse à chaque <span class="text-gradient">problème d'assainissement</span>
             </h2>
@@ -312,7 +317,7 @@
         <div class="pointer-events-none absolute right-0 top-1/4 h-96 w-96 rounded-full bg-ember-500/10 blur-3xl" aria-hidden="true"></div>
         <div class="container-x grid gap-16 lg:grid-cols-2 lg:items-center">
           <div>
-            <span class="eyebrow reveal">Pourquoi Phénix</span>
+            <span class="section-kicker reveal">Pourquoi Phénix</span>
             <h2 class="reveal mt-5 font-display text-3xl font-bold text-white sm:text-4xl lg:text-5xl" data-delay="80">
               L'expertise et l'exigence, à chaque intervention
             </h2>
@@ -385,7 +390,7 @@
       <section id="process" class="relative bg-navy-900 py-24 lg:py-32">
         <div class="container-x">
           <div class="mx-auto max-w-2xl text-center">
-            <span class="eyebrow reveal">Comment ça se passe</span>
+            <span class="section-kicker reveal">Comment ça se passe</span>
             <h2 class="reveal mt-5 font-display text-3xl font-bold text-white sm:text-4xl lg:text-5xl" data-delay="80">
               Simple, rapide, <span class="text-gradient">sans mauvaise surprise</span>
             </h2>
@@ -422,7 +427,7 @@
       <section id="zone" class="relative overflow-hidden bg-navy-950 py-24 lg:py-32">
         <div class="container-x grid gap-16 lg:grid-cols-2 lg:items-center">
           <div class="reveal">
-            <span class="eyebrow">Zone d'intervention</span>
+            <span class="section-kicker">Zone d'intervention</span>
             <h2 class="mt-5 font-display text-3xl font-bold text-white sm:text-4xl lg:text-5xl">
               Proches de chez vous, partout en <span class="text-gradient">Île-de-France</span>
             </h2>
@@ -453,7 +458,7 @@
               <span class="absolute left-[68%] top-[28%] h-2.5 w-2.5 rounded-full bg-aqua-400"></span>
               <span class="absolute left-[62%] top-[70%] h-2.5 w-2.5 rounded-full bg-aqua-400"></span>
               <span class="absolute left-[25%] top-[68%] h-2.5 w-2.5 rounded-full bg-aqua-400"></span>
-              <span class="absolute bottom-4 right-4 rounded-full bg-black/30 px-3 py-1 text-xs text-white/60 backdrop-blur">Carte à intégrer (Google Maps)</span>
+              <span class="absolute bottom-4 right-4 text-xs text-white/45">Carte à intégrer (Google Maps)</span>
             </div>
           </div>
         </div>
@@ -465,7 +470,7 @@
       <section id="avis" class="relative bg-navy-900 py-24 lg:py-32">
         <div class="container-x">
           <div class="mx-auto max-w-2xl text-center">
-            <span class="eyebrow reveal">Ils nous font confiance</span>
+            <span class="section-kicker reveal">Ils nous font confiance</span>
             <h2 class="reveal mt-5 font-display text-3xl font-bold text-white sm:text-4xl lg:text-5xl" data-delay="80">
               Ce que disent nos clients
             </h2>
@@ -514,7 +519,7 @@
       <section id="faq" class="relative bg-navy-950 py-24 lg:py-32">
         <div class="container-x grid gap-12 lg:grid-cols-[0.8fr_1.2fr]">
           <div class="reveal">
-            <span class="eyebrow">Questions fréquentes</span>
+            <span class="section-kicker">Questions fréquentes</span>
             <h2 class="mt-5 font-display text-3xl font-bold text-white sm:text-4xl">Vous vous posez sûrement ces questions</h2>
             <p class="mt-4 text-white/60">Vous ne trouvez pas votre réponse ?</p>
             <a href="#contact" class="btn-ghost mt-5">Nous contacter</a>
@@ -572,7 +577,7 @@
         <div class="container-x relative grid gap-12 lg:grid-cols-2">
           <!-- Coordonnées -->
           <div>
-            <span class="eyebrow reveal">Contact</span>
+            <span class="section-kicker reveal">Contact</span>
             <h2 class="reveal mt-5 font-display text-3xl font-bold text-white sm:text-4xl lg:text-5xl" data-delay="80">
               Parlons de votre <span class="text-gradient">besoin</span>
             </h2>
@@ -646,6 +651,53 @@
     </main>
 
     <!-- ============================================================
+         INFORMATIONS LÉGALES
+         ============================================================ -->
+    <section id="mentions-legales" class="border-t border-white/10 bg-navy-950 py-20 lg:py-24">
+      <div class="container-x grid gap-12 lg:grid-cols-[0.8fr_1.2fr]">
+        <div>
+          <span class="section-kicker">Informations légales</span>
+          <h2 class="mt-5 font-display text-3xl font-bold text-white sm:text-4xl">Mentions légales</h2>
+          <p class="mt-4 max-w-md text-sm leading-relaxed text-white/55">Les informations ci-dessous sont à compléter avec les données officielles de l'entreprise avant la mise en ligne.</p>
+        </div>
+        <div class="grid gap-8 text-sm leading-relaxed text-white/65 sm:grid-cols-2">
+          <div>
+            <h3 class="font-display font-semibold text-white">Éditeur du site</h3>
+            <p class="mt-3">Phénix Assainissement<br />Forme juridique : à compléter<br />SIRET : à compléter<br />Adresse : 12 rue de l'Exemple, 75000 Paris</p>
+          </div>
+          <div>
+            <h3 class="font-display font-semibold text-white">Hébergement</h3>
+            <p class="mt-3">Site hébergé par GitHub Pages<br />GitHub, Inc.<br />88 Colin P Kelly Jr Street<br />San Francisco, CA 94107, États-Unis</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="confidentialite" class="border-t border-white/10 bg-navy-900 py-20 lg:py-24">
+      <div class="container-x grid gap-12 lg:grid-cols-[0.8fr_1.2fr]">
+        <div>
+          <span class="section-kicker">Vos données</span>
+          <h2 class="mt-5 font-display text-3xl font-bold text-white sm:text-4xl">Politique de confidentialité</h2>
+        </div>
+        <div class="space-y-6 text-sm leading-relaxed text-white/65">
+          <div><h3 class="font-display font-semibold text-white">Données collectées</h3><p class="mt-2">Les informations saisies dans le formulaire servent uniquement à répondre à votre demande de contact et à préparer une intervention.</p></div>
+          <div><h3 class="font-display font-semibold text-white">Durée et droits</h3><p class="mt-2">Les données sont conservées pendant la durée nécessaire au traitement de votre demande. Vous pouvez demander leur accès, rectification ou suppression à l'adresse contact@phenix-assainissement.fr.</p></div>
+          <div><h3 class="font-display font-semibold text-white">Cookies</h3><p class="mt-2">Le site n'utilise pas de cookies publicitaires ni de solution de suivi externe par défaut.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="cgv" class="border-t border-white/10 bg-navy-950 py-20 lg:py-24">
+      <div class="container-x grid gap-12 lg:grid-cols-[0.8fr_1.2fr]">
+        <div>
+          <span class="section-kicker">Prestations</span>
+          <h2 class="mt-5 font-display text-3xl font-bold text-white sm:text-4xl">Conditions générales</h2>
+        </div>
+        <p class="max-w-2xl text-sm leading-relaxed text-white/65">Les tarifs, modalités d'intervention, garanties et conditions de règlement sont communiqués dans le devis avant toute prestation. Les conditions générales complètes sont à ajouter ici avant publication.</p>
+      </div>
+    </section>
+
+    <!-- ============================================================
          PIED DE PAGE
          ============================================================ -->
     <footer class="border-t border-white/10 bg-navy-950 py-14">
@@ -690,8 +742,9 @@
         <div class="flex flex-col items-center justify-between gap-4 text-xs text-white/40 sm:flex-row">
           <p>© <span data-year>2026</span> Phénix Assainissement. Tous droits réservés.</p>
           <div class="flex gap-6">
-            <a href="#" class="transition hover:text-white/70">Mentions légales</a>
-            <a href="#" class="transition hover:text-white/70">Politique de confidentialité</a>
+            <a href="#mentions-legales" class="transition hover:text-white/70">Mentions légales</a>
+            <a href="#confidentialite" class="transition hover:text-white/70">Politique de confidentialité</a>
+            <a href="#cgv" class="transition hover:text-white/70">Conditions générales</a>
           </div>
         </div>
       </div>
