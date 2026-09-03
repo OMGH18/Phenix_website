@@ -1,0 +1,702 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0a1628" />
+
+    <title>Phénix Assainissement — Débouchage, vidange & curage 24h/24</title>
+    <meta
+      name="description"
+      content="Phénix Assainissement : expert du débouchage de canalisation, de la vidange de fosse septique, du curage et de l'inspection vidéo. Intervention d'urgence 24h/24 et 7j/7, devis gratuit."
+    />
+    <meta name="author" content="Phénix Assainissement" />
+    <link rel="canonical" href="https://omgh18.github.io/Phenix_website/" />
+
+    <!-- Open Graph / réseaux sociaux -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:title" content="Phénix Assainissement — L'expert de l'assainissement 24h/24" />
+    <meta
+      property="og:description"
+      content="Débouchage, vidange, curage, inspection vidéo. Intervention d'urgence 24/7, devis gratuit."
+    />
+    <meta property="og:image" content="./og-image.svg" />
+
+    <!-- Favicon (placeholder — à remplacer par votre logo) -->
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+
+    <!-- Données structurées : entreprise locale (⚠️ à compléter avec vos vraies infos) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "PlumbingBusiness",
+        "name": "Phénix Assainissement",
+        "description": "Débouchage, vidange de fosse septique, curage et inspection vidéo de canalisations. Intervention d'urgence 24h/24.",
+        "telephone": "+33123456789",
+        "email": "contact@phenix-assainissement.fr",
+        "url": "https://omgh18.github.io/Phenix_website/",
+        "openingHours": "Mo-Su 00:00-24:00",
+        "areaServed": "Île-de-France",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "12 rue de l'Exemple",
+          "postalCode": "75000",
+          "addressLocality": "Paris",
+          "addressCountry": "FR"
+        }
+      }
+    </script>
+  </head>
+
+  <body class="antialiased">
+    <!-- Lien d'évitement (accessibilité) -->
+    <a
+      href="#contenu"
+      class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-lg focus:bg-ember-500 focus:px-4 focus:py-2 focus:text-white"
+    >Aller au contenu</a>
+
+    <!-- ============================================================
+         EN-TÊTE
+         ============================================================ -->
+    <header data-header class="fixed inset-x-0 top-0 z-50">
+      <div class="container-x flex h-20 items-center justify-between">
+        <!-- LOGO (placeholder — remplacez le SVG + le texte par votre logo) -->
+        <a href="#accueil" class="group flex items-center gap-3" aria-label="Phénix Assainissement — accueil">
+          <span class="relative grid h-11 w-11 place-items-center rounded-xl bg-gradient-to-br from-ember-500 to-gold shadow-[0_8px_24px_-8px_rgba(249,115,22,0.7)]">
+            <svg viewBox="0 0 24 24" class="h-6 w-6 text-navy-950" fill="currentColor" aria-hidden="true">
+              <path d="M12 2c.6 2.4-.3 4-1.6 5.2 1 .2 2-.1 2.9-.9-.2 1.7-1 2.7-2 3.4 1.3.3 2.6-.1 3.8-1.1.4 2.2-.6 3.9-2 5.1 1.6.2 3-.5 4.2-1.8.1 3.2-1.8 5.9-4.6 7.2 1.7.5 3.4.2 5-.9-1.1 2.9-4 4.6-7.7 4.6C7 27.9 3.2 24 3.2 19.1c0-2.7 1.2-4.9 3-6.7C7.9 10.7 9 8.9 9 6.7 9 4.9 8.2 3.4 7 2.4 9.4 2.2 11 3 12 4.3 12 3.4 12 2.7 12 2Z" transform="scale(0.86) translate(2 -0.5)"/>
+            </svg>
+          </span>
+          <span class="flex flex-col leading-none">
+            <span class="font-display text-lg font-bold tracking-tight text-white">PHÉNIX</span>
+            <span class="text-[0.62rem] font-semibold uppercase tracking-[0.34em] text-aqua-300">Assainissement</span>
+          </span>
+        </a>
+
+        <!-- Navigation bureau -->
+        <nav class="hidden items-center gap-8 lg:flex" aria-label="Navigation principale">
+          <a data-nav-link href="#services" class="text-sm font-medium text-white/70 transition hover:text-white">Services</a>
+          <a data-nav-link href="#expertise" class="text-sm font-medium text-white/70 transition hover:text-white">Expertise</a>
+          <a data-nav-link href="#process" class="text-sm font-medium text-white/70 transition hover:text-white">Déroulé</a>
+          <a data-nav-link href="#zone" class="text-sm font-medium text-white/70 transition hover:text-white">Zone</a>
+          <a data-nav-link href="#avis" class="text-sm font-medium text-white/70 transition hover:text-white">Avis</a>
+          <a data-nav-link href="#faq" class="text-sm font-medium text-white/70 transition hover:text-white">FAQ</a>
+        </nav>
+
+        <div class="flex items-center gap-3">
+          <a href="tel:+33123456789" class="btn-primary hidden sm:inline-flex">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-4 w-4"><path stroke-linecap="round" stroke-linejoin="round" d="M2.5 5.5c0 8.3 6.7 15 15 15 .8 0 1.5-.7 1.5-1.5v-2.6c0-.7-.5-1.3-1.2-1.5l-3-.6c-.6-.1-1.2.1-1.5.6l-.8 1.1a11.6 11.6 0 0 1-5.1-5.1l1.1-.8c.5-.3.7-.9.6-1.5l-.6-3C8.4 4.5 7.8 4 7.1 4H4.5C3.7 4 3 4.7 3 5.5Z"/></svg>
+            <span>Urgence 24/7</span>
+          </a>
+          <!-- Bouton menu mobile -->
+          <button
+            data-menu-btn
+            class="grid h-11 w-11 place-items-center rounded-xl border border-white/15 bg-white/5 text-white lg:hidden"
+            aria-label="Ouvrir le menu"
+            aria-expanded="false"
+          >
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-5 w-5"><path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Menu mobile -->
+      <div data-mobile-menu class="hidden border-t border-white/10 bg-navy-950/95 backdrop-blur-xl lg:hidden">
+        <nav class="container-x flex flex-col gap-1 py-5" aria-label="Navigation mobile">
+          <a href="#services" class="rounded-lg px-4 py-3 text-base font-medium text-white/80 hover:bg-white/5 hover:text-white">Services</a>
+          <a href="#expertise" class="rounded-lg px-4 py-3 text-base font-medium text-white/80 hover:bg-white/5 hover:text-white">Expertise</a>
+          <a href="#process" class="rounded-lg px-4 py-3 text-base font-medium text-white/80 hover:bg-white/5 hover:text-white">Déroulé</a>
+          <a href="#zone" class="rounded-lg px-4 py-3 text-base font-medium text-white/80 hover:bg-white/5 hover:text-white">Zone d'intervention</a>
+          <a href="#avis" class="rounded-lg px-4 py-3 text-base font-medium text-white/80 hover:bg-white/5 hover:text-white">Avis clients</a>
+          <a href="#faq" class="rounded-lg px-4 py-3 text-base font-medium text-white/80 hover:bg-white/5 hover:text-white">FAQ</a>
+          <a href="#contact" class="btn-primary mt-3 w-full">Demander un devis gratuit</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="contenu">
+      <!-- ============================================================
+           HERO
+           ============================================================ -->
+      <section id="accueil" class="relative overflow-hidden bg-navy-950 bg-aurora">
+        <div class="absolute inset-0 grid-lines" aria-hidden="true"></div>
+        <!-- Blobs décoratifs -->
+        <div class="pointer-events-none absolute -left-40 top-20 h-96 w-96 rounded-full bg-ember-500/20 blur-3xl" aria-hidden="true"></div>
+        <div class="pointer-events-none absolute -right-40 top-40 h-96 w-96 rounded-full bg-aqua-500/20 blur-3xl" aria-hidden="true"></div>
+
+        <div class="container-x relative grid gap-16 pb-24 pt-36 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:pb-32 lg:pt-44">
+          <!-- Texte -->
+          <div>
+            <span class="eyebrow reveal">
+              <span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span>
+              Disponible maintenant · Urgences 24h/24
+            </span>
+            <h1 class="reveal mt-6 font-display text-4xl font-extrabold leading-[1.05] text-white sm:text-5xl lg:text-6xl" data-delay="80">
+              L'assainissement<br />
+              qui <span class="text-gradient">renaît</span> à chaque<br />
+              intervention.
+            </h1>
+            <p class="reveal mt-6 max-w-xl text-lg leading-relaxed text-white/70" data-delay="160">
+              Débouchage, vidange de fosse septique, curage haute pression et inspection
+              vidéo. Des techniciens certifiés, un matériel de pointe et une intervention
+              rapide, partout et à toute heure.
+            </p>
+
+            <div class="reveal mt-9 flex flex-wrap items-center gap-4" data-delay="240">
+              <a href="#contact" class="btn-primary text-base">
+                Devis gratuit en 2 min
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-4 w-4"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-6-6 6 6-6 6"/></svg>
+              </a>
+              <a href="tel:+33123456789" class="btn-ghost text-base">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-4 w-4"><path stroke-linecap="round" stroke-linejoin="round" d="M2.5 5.5c0 8.3 6.7 15 15 15 .8 0 1.5-.7 1.5-1.5v-2.6c0-.7-.5-1.3-1.2-1.5l-3-.6c-.6-.1-1.2.1-1.5.6l-.8 1.1a11.6 11.6 0 0 1-5.1-5.1l1.1-.8c.5-.3.7-.9.6-1.5l-.6-3C8.4 4.5 7.8 4 7.1 4H4.5C3.7 4 3 4.7 3 5.5Z"/></svg>
+                01 23 45 67 89
+              </a>
+            </div>
+
+            <!-- Points de réassurance -->
+            <ul class="reveal mt-10 flex flex-wrap gap-x-7 gap-y-3 text-sm text-white/60" data-delay="320">
+              <li class="flex items-center gap-2"><svg viewBox="0 0 24 24" class="h-4 w-4 text-aqua-400" fill="none" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="m5 13 4 4L19 7"/></svg> Devis gratuit sans engagement</li>
+              <li class="flex items-center gap-2"><svg viewBox="0 0 24 24" class="h-4 w-4 text-aqua-400" fill="none" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="m5 13 4 4L19 7"/></svg> Techniciens certifiés</li>
+              <li class="flex items-center gap-2"><svg viewBox="0 0 24 24" class="h-4 w-4 text-aqua-400" fill="none" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="m5 13 4 4L19 7"/></svg> Tarifs transparents</li>
+            </ul>
+          </div>
+
+          <!-- Carte visuelle -->
+          <div class="reveal relative" data-delay="200">
+            <div class="glass-card overflow-hidden !p-0">
+              <!-- Zone image (⚠️ remplacer par une vraie photo : camion / intervention) -->
+              <div class="relative flex aspect-[4/3] items-center justify-center overflow-hidden bg-gradient-to-br from-navy-800 to-navy-950">
+                <div class="absolute inset-0 grid-lines opacity-60"></div>
+                <svg viewBox="0 0 24 24" class="animate-[float_6s_ease-in-out_infinite] h-28 w-28 text-white/10" fill="currentColor"><path d="M12 2c.6 2.4-.3 4-1.6 5.2 1 .2 2-.1 2.9-.9-.2 1.7-1 2.7-2 3.4 1.3.3 2.6-.1 3.8-1.1.4 2.2-.6 3.9-2 5.1 1.6.2 3-.5 4.2-1.8.1 3.2-1.8 5.9-4.6 7.2 1.7.5 3.4.2 5-.9-1.1 2.9-4 4.6-7.7 4.6C7 27.9 3.2 24 3.2 19.1c0-2.7 1.2-4.9 3-6.7C7.9 10.7 9 8.9 9 6.7 9 4.9 8.2 3.4 7 2.4 9.4 2.2 11 3 12 4.3 12 3.4 12 2.7 12 2Z"/></svg>
+                <span class="absolute bottom-4 left-4 rounded-full bg-black/30 px-3 py-1 text-xs font-medium text-white/60 backdrop-blur">Photo à insérer</span>
+              </div>
+            </div>
+
+            <!-- Badge flottant : délai -->
+            <div class="absolute -bottom-6 -left-6 hidden rounded-2xl border border-white/10 bg-navy-900/90 p-4 shadow-card backdrop-blur-xl sm:block">
+              <div class="flex items-center gap-3">
+                <span class="grid h-11 w-11 place-items-center rounded-xl bg-emerald-500/15 text-emerald-400">
+                  <svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path stroke-linecap="round" d="M12 7v5l3 2"/></svg>
+                </span>
+                <div>
+                  <p class="font-display text-xl font-bold text-white">~45 min</p>
+                  <p class="text-xs text-white/60">Délai moyen d'arrivée</p>
+                </div>
+              </div>
+            </div>
+            <!-- Badge flottant : note -->
+            <div class="absolute -right-4 -top-4 hidden rounded-2xl border border-white/10 bg-navy-900/90 p-4 shadow-card backdrop-blur-xl md:block">
+              <div class="flex items-center gap-1 text-gold">
+                <svg viewBox="0 0 24 24" class="h-4 w-4" fill="currentColor"><path d="m12 2 3 6.5 7 .6-5.3 4.6 1.6 6.9L12 17l-6 3.6 1.6-6.9L2 9.1l7-.6Z"/></svg>
+                <span class="ml-1 font-display text-lg font-bold text-white">4,9/5</span>
+              </div>
+              <p class="mt-0.5 text-xs text-white/60">+ de 600 avis</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bandeau de confiance -->
+        <div class="container-x relative pb-16">
+          <div class="hairline mb-10"></div>
+          <dl class="grid grid-cols-2 gap-8 sm:grid-cols-4">
+            <div class="reveal text-center sm:text-left">
+              <dt class="font-display text-4xl font-extrabold text-white"><span data-count="15" data-suffix="+">0</span></dt>
+              <dd class="mt-1 text-sm text-white/60">Ans d'expérience</dd>
+            </div>
+            <div class="reveal text-center sm:text-left" data-delay="80">
+              <dt class="font-display text-4xl font-extrabold text-white"><span data-count="8000" data-suffix="+">0</span></dt>
+              <dd class="mt-1 text-sm text-white/60">Interventions réalisées</dd>
+            </div>
+            <div class="reveal text-center sm:text-left" data-delay="160">
+              <dt class="font-display text-4xl font-extrabold text-white"><span data-count="98" data-suffix="%">0</span></dt>
+              <dd class="mt-1 text-sm text-white/60">Clients satisfaits</dd>
+            </div>
+            <div class="reveal text-center sm:text-left" data-delay="240">
+              <dt class="font-display text-4xl font-extrabold text-white">24/7</dt>
+              <dd class="mt-1 text-sm text-white/60">Disponibilité</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           SERVICES
+           ============================================================ -->
+      <section id="services" class="relative bg-navy-900 py-24 lg:py-32">
+        <div class="container-x">
+          <div class="mx-auto max-w-2xl text-center">
+            <span class="eyebrow reveal">Nos prestations</span>
+            <h2 class="reveal mt-5 font-display text-3xl font-bold text-white sm:text-4xl lg:text-5xl" data-delay="80">
+              Une réponse à chaque <span class="text-gradient">problème d'assainissement</span>
+            </h2>
+            <p class="reveal mt-5 text-lg text-white/65" data-delay="160">
+              Du simple bouchon à la réhabilitation complète d'un réseau, nous couvrons
+              l'ensemble des besoins des particuliers, syndics et professionnels.
+            </p>
+          </div>
+
+          <div class="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <!-- Carte service -->
+            <article class="glass-card reveal group">
+              <span class="grid h-13 w-13 place-items-center rounded-xl bg-ember-500/15 p-3 text-ember-400 transition group-hover:scale-110">
+                <svg viewBox="0 0 24 24" class="h-7 w-7" fill="none" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3c-3 3.6-5 6.4-5 9a5 5 0 0 0 10 0c0-2.6-2-5.4-5-9Z"/></svg>
+              </span>
+              <h3 class="mt-5 font-display text-xl font-semibold text-white">Débouchage de canalisation</h3>
+              <p class="mt-2 text-sm leading-relaxed text-white/60">Dégorgement rapide par furet électromécanique ou jet haute pression, sans casse ni tranchée.</p>
+            </article>
+
+            <article class="glass-card reveal group" data-delay="80">
+              <span class="grid h-13 w-13 place-items-center rounded-xl bg-aqua-500/15 p-3 text-aqua-400 transition group-hover:scale-110">
+                <svg viewBox="0 0 24 24" class="h-7 w-7" fill="none" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M4 10h16M6 10v8a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-8M9 10V6a3 3 0 0 1 6 0v4"/></svg>
+              </span>
+              <h3 class="mt-5 font-display text-xl font-semibold text-white">Vidange de fosse septique</h3>
+              <p class="mt-2 text-sm leading-relaxed text-white/60">Vidange et entretien des fosses toutes eaux et micro-stations, avec valorisation agréée des boues.</p>
+            </article>
+
+            <article class="glass-card reveal group" data-delay="160">
+              <span class="grid h-13 w-13 place-items-center rounded-xl bg-ember-500/15 p-3 text-ember-400 transition group-hover:scale-110">
+                <svg viewBox="0 0 24 24" class="h-7 w-7" fill="none" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M3 12h4l2 6 4-14 2 8h6"/></svg>
+              </span>
+              <h3 class="mt-5 font-display text-xl font-semibold text-white">Curage & hydrocurage</h3>
+              <p class="mt-2 text-sm leading-relaxed text-white/60">Nettoyage complet des collecteurs, réseaux et regards par camion hydrocureur haute puissance.</p>
+            </article>
+
+            <article class="glass-card reveal group">
+              <span class="grid h-13 w-13 place-items-center rounded-xl bg-aqua-500/15 p-3 text-aqua-400 transition group-hover:scale-110">
+                <svg viewBox="0 0 24 24" class="h-7 w-7" fill="none" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M4 7h3l2-2h6l2 2h3v12H4z"/><circle cx="12" cy="13" r="3.5"/></svg>
+              </span>
+              <h3 class="mt-5 font-display text-xl font-semibold text-white">Inspection vidéo</h3>
+              <p class="mt-2 text-sm leading-relaxed text-white/60">Diagnostic précis par caméra pour localiser fissures, racines et obstructions sans travaux inutiles.</p>
+            </article>
+
+            <article class="glass-card reveal group" data-delay="80">
+              <span class="grid h-13 w-13 place-items-center rounded-xl bg-ember-500/15 p-3 text-ember-400 transition group-hover:scale-110">
+                <svg viewBox="0 0 24 24" class="h-7 w-7" fill="none" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v6m0 0 3-3m-3 3L9 6M5 13h14l-1.5 7.5a1 1 0 0 1-1 .8H7.5a1 1 0 0 1-1-.8L5 13Z"/></svg>
+              </span>
+              <h3 class="mt-5 font-display text-xl font-semibold text-white">Pompage & assèchement</h3>
+              <p class="mt-2 text-sm leading-relaxed text-white/60">Pompage d'eaux usées, de cave inondée ou de poste de relevage, en urgence comme en préventif.</p>
+            </article>
+
+            <article class="glass-card reveal group" data-delay="160">
+              <span class="grid h-13 w-13 place-items-center rounded-xl bg-aqua-500/15 p-3 text-aqua-400 transition group-hover:scale-110">
+                <svg viewBox="0 0 24 24" class="h-7 w-7" fill="none" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M4 20h16M6 20V9l6-4 6 4v11M10 20v-5h4v5"/></svg>
+              </span>
+              <h3 class="mt-5 font-display text-xl font-semibold text-white">Assainissement non collectif</h3>
+              <p class="mt-2 text-sm leading-relaxed text-white/60">Installation, mise aux normes et réhabilitation des systèmes ANC pour les habitations non raccordées.</p>
+            </article>
+          </div>
+
+          <!-- Bandeau urgence -->
+          <div class="reveal mt-14 overflow-hidden rounded-3xl border border-ember-500/20 bg-gradient-to-r from-ember-500/10 via-navy-900 to-aqua-500/10 p-8 sm:p-10">
+            <div class="flex flex-col items-center justify-between gap-6 text-center md:flex-row md:text-left">
+              <div class="flex items-center gap-5">
+                <span class="grid h-14 w-14 shrink-0 place-items-center rounded-2xl bg-ember-500 text-white shadow-glow">
+                  <svg viewBox="0 0 24 24" class="h-7 w-7" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v4m0 4h.01M10.3 3.3 2 18a2 2 0 0 0 1.7 3h16.6a2 2 0 0 0 1.7-3L13.7 3.3a2 2 0 0 0-3.4 0Z"/></svg>
+                </span>
+                <div>
+                  <h3 class="font-display text-2xl font-bold text-white">Une urgence ? On arrive.</h3>
+                  <p class="mt-1 text-white/65">Intervention 24h/24, 7j/7, week-ends et jours fériés inclus.</p>
+                </div>
+              </div>
+              <a href="tel:+33123456789" class="btn-primary shrink-0 text-base">Appeler maintenant</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           EXPERTISE / POURQUOI NOUS
+           ============================================================ -->
+      <section id="expertise" class="relative overflow-hidden bg-navy-950 py-24 lg:py-32">
+        <div class="pointer-events-none absolute right-0 top-1/4 h-96 w-96 rounded-full bg-ember-500/10 blur-3xl" aria-hidden="true"></div>
+        <div class="container-x grid gap-16 lg:grid-cols-2 lg:items-center">
+          <div>
+            <span class="eyebrow reveal">Pourquoi Phénix</span>
+            <h2 class="reveal mt-5 font-display text-3xl font-bold text-white sm:text-4xl lg:text-5xl" data-delay="80">
+              L'expertise et l'exigence, à chaque intervention
+            </h2>
+            <p class="reveal mt-5 text-lg text-white/65" data-delay="120">
+              Depuis plus de 15 ans, nous remettons les réseaux à neuf avec la même
+              rigueur : un diagnostic honnête, un travail propre et une garantie sur nos
+              prestations.
+            </p>
+
+            <div class="mt-10 space-y-5">
+              <div class="reveal flex gap-4" data-delay="60">
+                <span class="mt-0.5 grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-white/5 text-aqua-400"><svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path stroke-linecap="round" d="M12 7v5l3 2"/></svg></span>
+                <div>
+                  <h3 class="font-display text-lg font-semibold text-white">Disponibilité 24h/24</h3>
+                  <p class="mt-1 text-sm text-white/60">Une astreinte permanente qui répond, même la nuit et le week-end.</p>
+                </div>
+              </div>
+              <div class="reveal flex gap-4" data-delay="120">
+                <span class="mt-0.5 grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-white/5 text-ember-400"><svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3 4 6v6c0 5 3.4 7.7 8 9 4.6-1.3 8-4 8-9V6l-8-3Z"/><path stroke-linecap="round" stroke-linejoin="round" d="m9 12 2 2 4-4"/></svg></span>
+                <div>
+                  <h3 class="font-display text-lg font-semibold text-white">Techniciens certifiés & assurés</h3>
+                  <p class="mt-1 text-sm text-white/60">Des équipes formées, équipées et couvertes par une assurance décennale.</p>
+                </div>
+              </div>
+              <div class="reveal flex gap-4" data-delay="180">
+                <span class="mt-0.5 grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-white/5 text-aqua-400"><svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M4 7h16M4 12h10M4 17h7"/></svg></span>
+                <div>
+                  <h3 class="font-display text-lg font-semibold text-white">Devis clair, tarifs transparents</h3>
+                  <p class="mt-1 text-sm text-white/60">Un prix annoncé avant l'intervention, sans surprise ni frais caché.</p>
+                </div>
+              </div>
+              <div class="reveal flex gap-4" data-delay="240">
+                <span class="mt-0.5 grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-white/5 text-emerald-400"><svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3c4 4 8 6.5 8 11a8 8 0 0 1-16 0c0-4.5 4-7 8-11Z"/></svg></span>
+                <div>
+                  <h3 class="font-display text-lg font-semibold text-white">Respect de l'environnement</h3>
+                  <p class="mt-1 text-sm text-white/60">Traitement et valorisation des déchets dans des centres agréés.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Visuel garantie -->
+          <div class="reveal relative" data-delay="120">
+            <div class="glass-card">
+              <div class="flex items-center gap-4">
+                <span class="grid h-16 w-16 place-items-center rounded-2xl bg-gradient-to-br from-ember-500 to-gold text-navy-950">
+                  <svg viewBox="0 0 24 24" class="h-8 w-8" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3 4 6v6c0 5 3.4 7.7 8 9 4.6-1.3 8-4 8-9V6l-8-3Z"/><path stroke-linecap="round" stroke-linejoin="round" d="m9 12 2 2 4-4"/></svg>
+                </span>
+                <div>
+                  <p class="font-display text-2xl font-bold text-white">Intervention garantie</p>
+                  <p class="text-white/60">Satisfaction assurée ou nous revenons.</p>
+                </div>
+              </div>
+              <div class="my-6 hairline"></div>
+              <ul class="grid grid-cols-2 gap-4 text-sm">
+                <li class="flex items-center gap-2 text-white/75"><svg viewBox="0 0 24 24" class="h-4 w-4 text-aqua-400" fill="none" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="m5 13 4 4L19 7"/></svg> Matériel de pointe</li>
+                <li class="flex items-center gap-2 text-white/75"><svg viewBox="0 0 24 24" class="h-4 w-4 text-aqua-400" fill="none" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="m5 13 4 4L19 7"/></svg> Chantier laissé propre</li>
+                <li class="flex items-center gap-2 text-white/75"><svg viewBox="0 0 24 24" class="h-4 w-4 text-aqua-400" fill="none" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="m5 13 4 4L19 7"/></svg> Paiement sécurisé</li>
+                <li class="flex items-center gap-2 text-white/75"><svg viewBox="0 0 24 24" class="h-4 w-4 text-aqua-400" fill="none" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="m5 13 4 4L19 7"/></svg> Conseils d'entretien</li>
+              </ul>
+            </div>
+            <div class="pointer-events-none absolute -bottom-8 -right-6 -z-10 h-40 w-40 rounded-full bg-aqua-500/20 blur-2xl"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           PROCESS
+           ============================================================ -->
+      <section id="process" class="relative bg-navy-900 py-24 lg:py-32">
+        <div class="container-x">
+          <div class="mx-auto max-w-2xl text-center">
+            <span class="eyebrow reveal">Comment ça se passe</span>
+            <h2 class="reveal mt-5 font-display text-3xl font-bold text-white sm:text-4xl lg:text-5xl" data-delay="80">
+              Simple, rapide, <span class="text-gradient">sans mauvaise surprise</span>
+            </h2>
+          </div>
+
+          <ol class="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+            <li class="glass-card reveal">
+              <span class="font-display text-5xl font-extrabold text-white/10">01</span>
+              <h3 class="mt-2 font-display text-lg font-semibold text-white">Appel & diagnostic</h3>
+              <p class="mt-2 text-sm text-white/60">Vous nous décrivez le problème, nous évaluons la situation et le degré d'urgence.</p>
+            </li>
+            <li class="glass-card reveal" data-delay="80">
+              <span class="font-display text-5xl font-extrabold text-white/10">02</span>
+              <h3 class="mt-2 font-display text-lg font-semibold text-white">Devis gratuit</h3>
+              <p class="mt-2 text-sm text-white/60">Un tarif clair et détaillé vous est communiqué avant toute intervention.</p>
+            </li>
+            <li class="glass-card reveal" data-delay="160">
+              <span class="font-display text-5xl font-extrabold text-white/10">03</span>
+              <h3 class="mt-2 font-display text-lg font-semibold text-white">Intervention</h3>
+              <p class="mt-2 text-sm text-white/60">Nos techniciens interviennent rapidement avec le matériel adapté.</p>
+            </li>
+            <li class="glass-card reveal" data-delay="240">
+              <span class="font-display text-5xl font-extrabold text-white/10">04</span>
+              <h3 class="mt-2 font-display text-lg font-semibold text-white">Garantie & suivi</h3>
+              <p class="mt-2 text-sm text-white/60">Vérification du résultat, conseils d'entretien et garantie sur la prestation.</p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           ZONE D'INTERVENTION
+           ============================================================ -->
+      <section id="zone" class="relative overflow-hidden bg-navy-950 py-24 lg:py-32">
+        <div class="container-x grid gap-16 lg:grid-cols-2 lg:items-center">
+          <div class="reveal">
+            <span class="eyebrow">Zone d'intervention</span>
+            <h2 class="mt-5 font-display text-3xl font-bold text-white sm:text-4xl lg:text-5xl">
+              Proches de chez vous, partout en <span class="text-gradient">Île-de-France</span>
+            </h2>
+            <p class="mt-5 text-lg text-white/65">
+              Nos équipes couvrent Paris et l'ensemble des départements franciliens.
+              <span class="text-white/45">(⚠️ À adapter à votre véritable zone.)</span>
+            </p>
+            <ul class="mt-8 grid grid-cols-2 gap-3 text-sm sm:grid-cols-3">
+              <li class="flex items-center gap-2 rounded-lg border border-white/10 bg-white/5 px-3 py-2 text-white/80">Paris (75)</li>
+              <li class="flex items-center gap-2 rounded-lg border border-white/10 bg-white/5 px-3 py-2 text-white/80">Hauts-de-Seine (92)</li>
+              <li class="flex items-center gap-2 rounded-lg border border-white/10 bg-white/5 px-3 py-2 text-white/80">Seine-St-Denis (93)</li>
+              <li class="flex items-center gap-2 rounded-lg border border-white/10 bg-white/5 px-3 py-2 text-white/80">Val-de-Marne (94)</li>
+              <li class="flex items-center gap-2 rounded-lg border border-white/10 bg-white/5 px-3 py-2 text-white/80">Yvelines (78)</li>
+              <li class="flex items-center gap-2 rounded-lg border border-white/10 bg-white/5 px-3 py-2 text-white/80">Essonne (91)</li>
+            </ul>
+            <a href="#contact" class="btn-primary mt-9">Vérifier ma disponibilité</a>
+          </div>
+
+          <!-- Carte stylisée (placeholder) -->
+          <div class="reveal" data-delay="120">
+            <div class="glass-card relative flex aspect-square items-center justify-center overflow-hidden !p-0">
+              <div class="absolute inset-0 grid-lines opacity-70"></div>
+              <div class="absolute inset-0 bg-gradient-to-br from-aqua-500/10 to-ember-500/10"></div>
+              <!-- Pings -->
+              <span class="absolute left-1/2 top-1/2 h-4 w-4 -translate-x-1/2 -translate-y-1/2 rounded-full bg-ember-500 shadow-glow"></span>
+              <span class="absolute left-1/2 top-1/2 h-4 w-4 -translate-x-1/2 -translate-y-1/2 animate-ping rounded-full bg-ember-500/70"></span>
+              <span class="absolute left-[30%] top-[35%] h-2.5 w-2.5 rounded-full bg-aqua-400"></span>
+              <span class="absolute left-[68%] top-[28%] h-2.5 w-2.5 rounded-full bg-aqua-400"></span>
+              <span class="absolute left-[62%] top-[70%] h-2.5 w-2.5 rounded-full bg-aqua-400"></span>
+              <span class="absolute left-[25%] top-[68%] h-2.5 w-2.5 rounded-full bg-aqua-400"></span>
+              <span class="absolute bottom-4 right-4 rounded-full bg-black/30 px-3 py-1 text-xs text-white/60 backdrop-blur">Carte à intégrer (Google Maps)</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           AVIS CLIENTS
+           ============================================================ -->
+      <section id="avis" class="relative bg-navy-900 py-24 lg:py-32">
+        <div class="container-x">
+          <div class="mx-auto max-w-2xl text-center">
+            <span class="eyebrow reveal">Ils nous font confiance</span>
+            <h2 class="reveal mt-5 font-display text-3xl font-bold text-white sm:text-4xl lg:text-5xl" data-delay="80">
+              Ce que disent nos clients
+            </h2>
+          </div>
+
+          <div class="mt-16 grid gap-6 md:grid-cols-3">
+            <figure class="glass-card reveal">
+              <div class="flex gap-1 text-gold">
+                <svg viewBox="0 0 24 24" class="h-4 w-4" fill="currentColor"><path d="m12 2 3 6.5 7 .6-5.3 4.6 1.6 6.9L12 17l-6 3.6 1.6-6.9L2 9.1l7-.6Z"/></svg><svg viewBox="0 0 24 24" class="h-4 w-4" fill="currentColor"><path d="m12 2 3 6.5 7 .6-5.3 4.6 1.6 6.9L12 17l-6 3.6 1.6-6.9L2 9.1l7-.6Z"/></svg><svg viewBox="0 0 24 24" class="h-4 w-4" fill="currentColor"><path d="m12 2 3 6.5 7 .6-5.3 4.6 1.6 6.9L12 17l-6 3.6 1.6-6.9L2 9.1l7-.6Z"/></svg><svg viewBox="0 0 24 24" class="h-4 w-4" fill="currentColor"><path d="m12 2 3 6.5 7 .6-5.3 4.6 1.6 6.9L12 17l-6 3.6 1.6-6.9L2 9.1l7-.6Z"/></svg><svg viewBox="0 0 24 24" class="h-4 w-4" fill="currentColor"><path d="m12 2 3 6.5 7 .6-5.3 4.6 1.6 6.9L12 17l-6 3.6 1.6-6.9L2 9.1l7-.6Z"/></svg>
+              </div>
+              <blockquote class="mt-4 text-white/75">« Canalisation bouchée un dimanche soir, ils sont venus en moins d'une heure. Rapide, propre et très pro. »</blockquote>
+              <figcaption class="mt-6 flex items-center gap-3">
+                <span class="grid h-10 w-10 place-items-center rounded-full bg-ember-500/20 font-display font-bold text-ember-300">SM</span>
+                <div><p class="text-sm font-semibold text-white">Sophie M.</p><p class="text-xs text-white/50">Particulier · Paris 15e</p></div>
+              </figcaption>
+            </figure>
+
+            <figure class="glass-card reveal" data-delay="80">
+              <div class="flex gap-1 text-gold">
+                <svg viewBox="0 0 24 24" class="h-4 w-4" fill="currentColor"><path d="m12 2 3 6.5 7 .6-5.3 4.6 1.6 6.9L12 17l-6 3.6 1.6-6.9L2 9.1l7-.6Z"/></svg><svg viewBox="0 0 24 24" class="h-4 w-4" fill="currentColor"><path d="m12 2 3 6.5 7 .6-5.3 4.6 1.6 6.9L12 17l-6 3.6 1.6-6.9L2 9.1l7-.6Z"/></svg><svg viewBox="0 0 24 24" class="h-4 w-4" fill="currentColor"><path d="m12 2 3 6.5 7 .6-5.3 4.6 1.6 6.9L12 17l-6 3.6 1.6-6.9L2 9.1l7-.6Z"/></svg><svg viewBox="0 0 24 24" class="h-4 w-4" fill="currentColor"><path d="m12 2 3 6.5 7 .6-5.3 4.6 1.6 6.9L12 17l-6 3.6 1.6-6.9L2 9.1l7-.6Z"/></svg><svg viewBox="0 0 24 24" class="h-4 w-4" fill="currentColor"><path d="m12 2 3 6.5 7 .6-5.3 4.6 1.6 6.9L12 17l-6 3.6 1.6-6.9L2 9.1l7-.6Z"/></svg>
+              </div>
+              <blockquote class="mt-4 text-white/75">« Vidange de la fosse septique impeccable, devis respecté à l'euro près. Je recommande sans hésiter. »</blockquote>
+              <figcaption class="mt-6 flex items-center gap-3">
+                <span class="grid h-10 w-10 place-items-center rounded-full bg-aqua-500/20 font-display font-bold text-aqua-300">KD</span>
+                <div><p class="text-sm font-semibold text-white">Karim D.</p><p class="text-xs text-white/50">Propriétaire · Essonne</p></div>
+              </figcaption>
+            </figure>
+
+            <figure class="glass-card reveal" data-delay="160">
+              <div class="flex gap-1 text-gold">
+                <svg viewBox="0 0 24 24" class="h-4 w-4" fill="currentColor"><path d="m12 2 3 6.5 7 .6-5.3 4.6 1.6 6.9L12 17l-6 3.6 1.6-6.9L2 9.1l7-.6Z"/></svg><svg viewBox="0 0 24 24" class="h-4 w-4" fill="currentColor"><path d="m12 2 3 6.5 7 .6-5.3 4.6 1.6 6.9L12 17l-6 3.6 1.6-6.9L2 9.1l7-.6Z"/></svg><svg viewBox="0 0 24 24" class="h-4 w-4" fill="currentColor"><path d="m12 2 3 6.5 7 .6-5.3 4.6 1.6 6.9L12 17l-6 3.6 1.6-6.9L2 9.1l7-.6Z"/></svg><svg viewBox="0 0 24 24" class="h-4 w-4" fill="currentColor"><path d="m12 2 3 6.5 7 .6-5.3 4.6 1.6 6.9L12 17l-6 3.6 1.6-6.9L2 9.1l7-.6Z"/></svg><svg viewBox="0 0 24 24" class="h-4 w-4" fill="currentColor"><path d="m12 2 3 6.5 7 .6-5.3 4.6 1.6 6.9L12 17l-6 3.6 1.6-6.9L2 9.1l7-.6Z"/></svg>
+              </div>
+              <blockquote class="mt-4 text-white/75">« Syndic, nous faisons appel à Phénix pour le curage des parkings. Fiables et réactifs depuis des années. »</blockquote>
+              <figcaption class="mt-6 flex items-center gap-3">
+                <span class="grid h-10 w-10 place-items-center rounded-full bg-ember-500/20 font-display font-bold text-ember-300">LR</span>
+                <div><p class="text-sm font-semibold text-white">Laure R.</p><p class="text-xs text-white/50">Gestionnaire · Hauts-de-Seine</p></div>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           FAQ
+           ============================================================ -->
+      <section id="faq" class="relative bg-navy-950 py-24 lg:py-32">
+        <div class="container-x grid gap-12 lg:grid-cols-[0.8fr_1.2fr]">
+          <div class="reveal">
+            <span class="eyebrow">Questions fréquentes</span>
+            <h2 class="mt-5 font-display text-3xl font-bold text-white sm:text-4xl">Vous vous posez sûrement ces questions</h2>
+            <p class="mt-4 text-white/60">Vous ne trouvez pas votre réponse ?</p>
+            <a href="#contact" class="btn-ghost mt-5">Nous contacter</a>
+          </div>
+
+          <div class="space-y-3">
+            <div data-faq class="glass-card reveal !p-0">
+              <button data-faq-btn class="flex w-full items-center justify-between gap-4 p-6 text-left" aria-expanded="false">
+                <span class="font-display text-lg font-semibold text-white">Intervenez-vous vraiment 24h/24 ?</span>
+                <svg class="faq-chevron h-5 w-5 shrink-0 text-ember-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="m6 9 6 6 6-6"/></svg>
+              </button>
+              <div data-faq-panel><p class="px-6 pb-6 text-white/65">Oui. Une astreinte est assurée en continu, y compris la nuit, les week-ends et les jours fériés. Pour une urgence, l'appel téléphonique reste le plus rapide.</p></div>
+            </div>
+
+            <div data-faq class="glass-card reveal !p-0" data-delay="60">
+              <button data-faq-btn class="flex w-full items-center justify-between gap-4 p-6 text-left" aria-expanded="false">
+                <span class="font-display text-lg font-semibold text-white">Le devis est-il vraiment gratuit ?</span>
+                <svg class="faq-chevron h-5 w-5 shrink-0 text-ember-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="m6 9 6 6 6-6"/></svg>
+              </button>
+              <div data-faq-panel><p class="px-6 pb-6 text-white/65">Absolument. Le devis est gratuit et sans engagement. Le tarif vous est communiqué avant toute intervention : vous décidez en connaissance de cause.</p></div>
+            </div>
+
+            <div data-faq class="glass-card reveal !p-0" data-delay="120">
+              <button data-faq-btn class="flex w-full items-center justify-between gap-4 p-6 text-left" aria-expanded="false">
+                <span class="font-display text-lg font-semibold text-white">Quels sont vos délais d'intervention ?</span>
+                <svg class="faq-chevron h-5 w-5 shrink-0 text-ember-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="m6 9 6 6 6-6"/></svg>
+              </button>
+              <div data-faq-panel><p class="px-6 pb-6 text-white/65">En zone couverte, nous arrivons en moyenne sous 45 minutes pour les urgences. Pour un rendez-vous planifié, nous nous adaptons à votre agenda.</p></div>
+            </div>
+
+            <div data-faq class="glass-card reveal !p-0" data-delay="180">
+              <button data-faq-btn class="flex w-full items-center justify-between gap-4 p-6 text-left" aria-expanded="false">
+                <span class="font-display text-lg font-semibold text-white">Travaillez-vous avec les professionnels et syndics ?</span>
+                <svg class="faq-chevron h-5 w-5 shrink-0 text-ember-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="m6 9 6 6 6-6"/></svg>
+              </button>
+              <div data-faq-panel><p class="px-6 pb-6 text-white/65">Oui, nous accompagnons particuliers, syndics de copropriété, commerces et entreprises, avec des contrats d'entretien réguliers si besoin.</p></div>
+            </div>
+
+            <div data-faq class="glass-card reveal !p-0" data-delay="240">
+              <button data-faq-btn class="flex w-full items-center justify-between gap-4 p-6 text-left" aria-expanded="false">
+                <span class="font-display text-lg font-semibold text-white">Quels moyens de paiement acceptez-vous ?</span>
+                <svg class="faq-chevron h-5 w-5 shrink-0 text-ember-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="m6 9 6 6 6-6"/></svg>
+              </button>
+              <div data-faq-panel><p class="px-6 pb-6 text-white/65">Carte bancaire, espèces, chèque et virement. Une facture détaillée vous est systématiquement remise.</p></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           CONTACT
+           ============================================================ -->
+      <section id="contact" class="relative overflow-hidden bg-navy-900 py-24 lg:py-32">
+        <div class="pointer-events-none absolute left-1/2 top-0 h-96 w-[40rem] -translate-x-1/2 rounded-full bg-ember-500/10 blur-3xl" aria-hidden="true"></div>
+        <div class="container-x relative grid gap-12 lg:grid-cols-2">
+          <!-- Coordonnées -->
+          <div>
+            <span class="eyebrow reveal">Contact</span>
+            <h2 class="reveal mt-5 font-display text-3xl font-bold text-white sm:text-4xl lg:text-5xl" data-delay="80">
+              Parlons de votre <span class="text-gradient">besoin</span>
+            </h2>
+            <p class="reveal mt-5 text-lg text-white/65" data-delay="120">
+              Un bouchon, une odeur, une fosse à vidanger ? Décrivez-nous la situation :
+              nous vous rappelons rapidement avec une solution et un tarif clair.
+            </p>
+
+            <div class="mt-10 space-y-4">
+              <a href="tel:+33123456789" class="reveal flex items-center gap-4 rounded-2xl border border-white/10 bg-white/5 p-5 transition hover:border-ember-500/40 hover:bg-white/[0.07]">
+                <span class="grid h-12 w-12 place-items-center rounded-xl bg-ember-500/15 text-ember-400"><svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M2.5 5.5c0 8.3 6.7 15 15 15 .8 0 1.5-.7 1.5-1.5v-2.6c0-.7-.5-1.3-1.2-1.5l-3-.6c-.6-.1-1.2.1-1.5.6l-.8 1.1a11.6 11.6 0 0 1-5.1-5.1l1.1-.8c.5-.3.7-.9.6-1.5l-.6-3C8.4 4.5 7.8 4 7.1 4H4.5C3.7 4 3 4.7 3 5.5Z"/></svg></span>
+                <div><p class="text-xs uppercase tracking-wider text-white/45">Téléphone · 24h/24</p><p class="font-display text-lg font-semibold text-white">01 23 45 67 89</p></div>
+              </a>
+              <a href="mailto:contact@phenix-assainissement.fr" class="reveal flex items-center gap-4 rounded-2xl border border-white/10 bg-white/5 p-5 transition hover:border-aqua-500/40 hover:bg-white/[0.07]" data-delay="80">
+                <span class="grid h-12 w-12 place-items-center rounded-xl bg-aqua-500/15 text-aqua-400"><svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path stroke-linecap="round" stroke-linejoin="round" d="m4 7 8 6 8-6"/></svg></span>
+                <div><p class="text-xs uppercase tracking-wider text-white/45">E-mail</p><p class="font-display text-lg font-semibold text-white">contact@phenix-assainissement.fr</p></div>
+              </a>
+              <div class="reveal flex items-center gap-4 rounded-2xl border border-white/10 bg-white/5 p-5" data-delay="160">
+                <span class="grid h-12 w-12 place-items-center rounded-xl bg-white/10 text-white"><svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21s7-5.7 7-11a7 7 0 1 0-14 0c0 5.3 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg></span>
+                <div><p class="text-xs uppercase tracking-wider text-white/45">Adresse</p><p class="font-display text-lg font-semibold text-white">12 rue de l'Exemple, 75000 Paris</p></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Formulaire -->
+          <div class="reveal" data-delay="120">
+            <form
+              class="glass-card space-y-5"
+              action="https://formspree.io/f/VOTRE_ID"
+              method="POST"
+            >
+              <!-- ⚠️ GitHub Pages ne traite pas les formulaires côté serveur.
+                   Créez un formulaire gratuit sur formspree.io (ou similaire)
+                   et collez votre identifiant dans l'attribut action ci-dessus. -->
+              <div class="grid gap-5 sm:grid-cols-2">
+                <div>
+                  <label for="nom" class="mb-2 block text-sm font-medium text-white/80">Nom complet</label>
+                  <input id="nom" name="nom" type="text" required placeholder="Votre nom" class="w-full rounded-xl border border-white/10 bg-navy-950/60 px-4 py-3 text-white placeholder:text-white/30 focus:border-ember-500/50 focus:outline-none" />
+                </div>
+                <div>
+                  <label for="tel" class="mb-2 block text-sm font-medium text-white/80">Téléphone</label>
+                  <input id="tel" name="telephone" type="tel" required placeholder="06 00 00 00 00" class="w-full rounded-xl border border-white/10 bg-navy-950/60 px-4 py-3 text-white placeholder:text-white/30 focus:border-ember-500/50 focus:outline-none" />
+                </div>
+              </div>
+              <div>
+                <label for="email" class="mb-2 block text-sm font-medium text-white/80">E-mail</label>
+                <input id="email" name="email" type="email" placeholder="vous@exemple.fr" class="w-full rounded-xl border border-white/10 bg-navy-950/60 px-4 py-3 text-white placeholder:text-white/30 focus:border-ember-500/50 focus:outline-none" />
+              </div>
+              <div>
+                <label for="service" class="mb-2 block text-sm font-medium text-white/80">Type d'intervention</label>
+                <select id="service" name="service" class="w-full rounded-xl border border-white/10 bg-navy-950/60 px-4 py-3 text-white focus:border-ember-500/50 focus:outline-none">
+                  <option>Débouchage de canalisation</option>
+                  <option>Vidange de fosse septique</option>
+                  <option>Curage / hydrocurage</option>
+                  <option>Inspection vidéo</option>
+                  <option>Pompage / assèchement</option>
+                  <option>Assainissement non collectif</option>
+                  <option>Autre / je ne sais pas</option>
+                </select>
+              </div>
+              <div>
+                <label for="message" class="mb-2 block text-sm font-medium text-white/80">Votre message</label>
+                <textarea id="message" name="message" rows="4" placeholder="Décrivez votre problème…" class="w-full resize-none rounded-xl border border-white/10 bg-navy-950/60 px-4 py-3 text-white placeholder:text-white/30 focus:border-ember-500/50 focus:outline-none"></textarea>
+              </div>
+              <button type="submit" class="btn-primary w-full text-base">Envoyer ma demande</button>
+              <p class="text-center text-xs text-white/40">Réponse sous 24h ouvrées · Vos données restent confidentielles.</p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ============================================================
+         PIED DE PAGE
+         ============================================================ -->
+    <footer class="border-t border-white/10 bg-navy-950 py-14">
+      <div class="container-x">
+        <div class="grid gap-10 md:grid-cols-[1.4fr_1fr_1fr]">
+          <div>
+            <div class="flex items-center gap-3">
+              <span class="grid h-10 w-10 place-items-center rounded-xl bg-gradient-to-br from-ember-500 to-gold">
+                <svg viewBox="0 0 24 24" class="h-5 w-5 text-navy-950" fill="currentColor"><path d="M12 2c.6 2.4-.3 4-1.6 5.2 1 .2 2-.1 2.9-.9-.2 1.7-1 2.7-2 3.4 1.3.3 2.6-.1 3.8-1.1.4 2.2-.6 3.9-2 5.1 1.6.2 3-.5 4.2-1.8.1 3.2-1.8 5.9-4.6 7.2 1.7.5 3.4.2 5-.9-1.1 2.9-4 4.6-7.7 4.6C7 27.9 3.2 24 3.2 19.1c0-2.7 1.2-4.9 3-6.7C7.9 10.7 9 8.9 9 6.7 9 4.9 8.2 3.4 7 2.4 9.4 2.2 11 3 12 4.3 12 3.4 12 2.7 12 2Z" transform="scale(0.86) translate(2 -0.5)"/></svg>
+              </span>
+              <span class="font-display text-lg font-bold text-white">Phénix Assainissement</span>
+            </div>
+            <p class="mt-4 max-w-sm text-sm text-white/55">
+              Votre expert de l'assainissement en Île-de-France. Débouchage, vidange,
+              curage et inspection vidéo — 24h/24, 7j/7.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="font-display text-sm font-semibold uppercase tracking-wider text-white/80">Navigation</h3>
+            <ul class="mt-4 space-y-2 text-sm text-white/55">
+              <li><a href="#services" class="transition hover:text-white">Services</a></li>
+              <li><a href="#expertise" class="transition hover:text-white">Expertise</a></li>
+              <li><a href="#zone" class="transition hover:text-white">Zone d'intervention</a></li>
+              <li><a href="#avis" class="transition hover:text-white">Avis clients</a></li>
+              <li><a href="#faq" class="transition hover:text-white">FAQ</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="font-display text-sm font-semibold uppercase tracking-wider text-white/80">Contact</h3>
+            <ul class="mt-4 space-y-2 text-sm text-white/55">
+              <li><a href="tel:+33123456789" class="transition hover:text-white">01 23 45 67 89</a></li>
+              <li><a href="mailto:contact@phenix-assainissement.fr" class="transition hover:text-white">contact@phenix-assainissement.fr</a></li>
+              <li>12 rue de l'Exemple, 75000 Paris</li>
+              <li class="pt-2 text-emerald-400">● Ouvert 24h/24</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="my-8 hairline"></div>
+        <div class="flex flex-col items-center justify-between gap-4 text-xs text-white/40 sm:flex-row">
+          <p>© <span data-year>2026</span> Phénix Assainissement. Tous droits réservés.</p>
+          <div class="flex gap-6">
+            <a href="#" class="transition hover:text-white/70">Mentions légales</a>
+            <a href="#" class="transition hover:text-white/70">Politique de confidentialité</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
