@@ -113,7 +113,21 @@
         <div data-parallax="0.12" class="parallax-orb pointer-events-none absolute -left-40 top-20 h-96 w-96 rounded-full bg-ember-500/20 blur-3xl" aria-hidden="true"></div>
         <div data-parallax="-0.08" class="parallax-orb pointer-events-none absolute -right-40 top-40 h-96 w-96 rounded-full bg-aqua-500/20 blur-3xl" aria-hidden="true"></div>
 
-        <div class="container-x relative grid gap-12 pb-24 pt-36 lg:grid-cols-2 lg:items-center lg:pb-32 lg:pt-44">
+        <!-- Prestations en premier, juste sous la navigation -->
+        <div class="container-x service-marquee-top relative">
+          <div class="service-marquee" role="region" aria-label="Nos services : débouchage, entretien des réseaux, vidange de fosses, pompage, curage et inspection caméra">
+            <div class="service-marquee-track">
+              <ul class="service-marquee-list">
+                <li>Débouchage</li><li>Entretien des réseaux</li><li>Vidange de fosses</li><li>Pompage</li><li>Curage</li><li>Inspection caméra</li>
+              </ul>
+              <ul class="service-marquee-list" aria-hidden="true">
+                <li>Débouchage</li><li>Entretien des réseaux</li><li>Vidange de fosses</li><li>Pompage</li><li>Curage</li><li>Inspection caméra</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-content container-x relative grid gap-12 lg:grid-cols-2 lg:items-center">
           <!-- Texte -->
           <div>
             <div class="availability reveal" aria-label="Disponible maintenant, 24 heures sur 24 et 7 jours sur 7">
@@ -140,9 +154,6 @@
               </a>
             </div>
 
-            <p class="reveal mt-8 flex items-center gap-3 text-sm text-white/65" data-delay="320">
-              <span class="h-px w-10 bg-gold"></span> Débouchage · Entretien réseaux · Vidange · Pompage · Curage · Inspection caméra
-            </p>
           </div>
 
           <!-- Carte visuelle -->
@@ -163,20 +174,6 @@
           </div>
         </div>
 
-        <!-- Défilement des prestations -->
-        <div class="container-x relative pb-16">
-          <div class="hairline mb-10"></div>
-          <div class="service-marquee" role="region" aria-label="Nos services : débouchage, entretien des réseaux, vidange de fosses, pompage, curage et inspection caméra">
-            <div class="service-marquee-track">
-              <ul class="service-marquee-list">
-                <li>Débouchage</li><li>Entretien des réseaux</li><li>Vidange de fosses</li><li>Pompage</li><li>Curage</li><li>Inspection caméra</li>
-              </ul>
-              <ul class="service-marquee-list" aria-hidden="true">
-                <li>Débouchage</li><li>Entretien des réseaux</li><li>Vidange de fosses</li><li>Pompage</li><li>Curage</li><li>Inspection caméra</li>
-              </ul>
-            </div>
-          </div>
-        </div>
       </section>
 
       <!-- ============================================================

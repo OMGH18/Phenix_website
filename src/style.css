@@ -313,17 +313,6 @@ body {
 
 .header-brand-wrap {
   position: relative;
-  isolation: isolate;
-}
-
-.header-brand-wrap::before {
-  position: absolute;
-  z-index: -1;
-  inset: -0.8rem -1.2rem;
-  border-radius: 50%;
-  background: radial-gradient(ellipse, rgba(151, 180, 131, 0.38) 0%, rgba(111, 145, 103, 0.22) 42%, transparent 74%);
-  content: "";
-  filter: blur(0.35rem);
 }
 
 .header-brand-logo {
@@ -342,6 +331,10 @@ body {
   mask-image: linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent);
 }
 
+.service-marquee-top .service-marquee {
+  mask-image: linear-gradient(90deg, transparent, #000 4%, #000 96%, transparent);
+}
+
 .service-marquee-track {
   display: flex;
   width: max-content;
@@ -357,10 +350,10 @@ body {
   display: flex;
   flex: none;
   align-items: center;
-  gap: 2rem;
-  padding: 0 2rem 0 0;
+  gap: 2.5rem;
+  padding: 0 2.5rem 0 0;
   color: rgba(245, 243, 233, 0.9);
-  font-size: clamp(1.1rem, 1.7vw, 1.45rem);
+  font-size: clamp(1.3rem, 2vw, 1.75rem);
   font-weight: 600;
   letter-spacing: 0.01em;
   white-space: nowrap;
@@ -369,7 +362,7 @@ body {
 .service-marquee-list li {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 2.5rem;
 }
 
 .service-marquee-list li::after {
@@ -450,16 +443,19 @@ body {
 #accueil {
   background-color: #081d14;
   background-image:
-    radial-gradient(ellipse 42rem 34rem at 86% 35%, rgba(91, 133, 73, 0.32), transparent 76%),
-    radial-gradient(ellipse 30rem 25rem at 6% 8%, rgba(194, 160, 67, 0.13), transparent 75%),
-    radial-gradient(ellipse 45rem 22rem at 47% 100%, rgba(31, 71, 43, 0.36), transparent 78%),
-    linear-gradient(132deg, #081d14 2%, #123321 49%, #0b2117 100%);
-  background-size: 118% 118%;
-  animation: aurora-shift 24s ease-in-out infinite alternate;
+    radial-gradient(ellipse 42rem 34rem at 86% 42%, rgba(91, 133, 73, 0.28), transparent 76%),
+    radial-gradient(ellipse 32rem 20rem at 10% 4%, rgba(235, 207, 126, 0.2), transparent 74%),
+    linear-gradient(180deg, #b69d55 0%, #96884a 12%, #627342 25%, #294d32 43%, #123321 61%, #081d14 82%);
+  background-size: 100% 100%;
 }
 
-#accueil .container-x:first-of-type {
-  padding-top: 10rem;
+.service-marquee-top {
+  padding-top: 7.35rem;
+  padding-bottom: 0.65rem;
+}
+
+#accueil .hero-content {
+  padding-top: 2.3rem;
   padding-bottom: 6rem;
 }
 
@@ -564,6 +560,30 @@ body {
   color: var(--brand-gold);
 }
 
+[data-header]:not(.is-scrolled) [data-nav-link],
+[data-header]:not(.is-scrolled) [data-menu-btn] {
+  color: #10291b;
+}
+
+[data-header]:not(.is-scrolled) .header-callout {
+  color: rgba(16, 41, 27, 0.9);
+}
+
+[data-header]:not(.is-scrolled) .header-callout strong,
+[data-header]:not(.is-scrolled) .header-phone,
+[data-header]:not(.is-scrolled) .header-phone svg {
+  color: #10291b;
+}
+
+[data-header]:not(.is-scrolled) .header-phone {
+  border-color: rgba(16, 41, 27, 0.45);
+}
+
+[data-header]:not(.is-scrolled) .header-phone:hover {
+  border-color: rgba(16, 41, 27, 0.8);
+  background: rgba(16, 41, 27, 0.08);
+}
+
 .hero-visual {
   min-height: 22rem;
   aspect-ratio: 4 / 3;
@@ -649,13 +669,17 @@ body {
 }
 
 @media (max-width: 640px) {
-  #accueil .container-x:first-of-type {
-    padding-top: 8.5rem;
+  .service-marquee-top {
+    padding-top: 6.1rem;
+    padding-bottom: 0.4rem;
+  }
+
+  #accueil .hero-content {
+    padding-top: 1.7rem;
     padding-bottom: 4rem;
   }
 
   [data-header] .container-x { height: 5rem; gap: 0.5rem; }
-  .header-brand-wrap::before { inset: -0.45rem -0.55rem; }
   .header-brand-logo { width: 5.5rem; height: 4.5rem; }
   .header-callout { padding-left: 0.42rem; }
   .header-callout span { font-size: 0.58rem; }
