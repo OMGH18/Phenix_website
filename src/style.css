@@ -444,8 +444,8 @@ body {
   background-color: #081d14;
   background-image:
     radial-gradient(ellipse 42rem 34rem at 86% 42%, rgba(91, 133, 73, 0.28), transparent 76%),
-    radial-gradient(ellipse 32rem 20rem at 10% 4%, rgba(235, 207, 126, 0.2), transparent 74%),
-    linear-gradient(180deg, #b69d55 0%, #96884a 12%, #627342 25%, #294d32 43%, #123321 61%, #081d14 82%);
+    radial-gradient(ellipse 32rem 20rem at 10% 4%, rgba(215, 190, 121, 0.1), transparent 78%),
+    linear-gradient(180deg, #8b7d59 0%, #7c7952 16%, #69754a 32%, #4d693e 48%, #315638 65%, #193b28 82%, #081d14 100%);
   background-size: 100% 100%;
 }
 
