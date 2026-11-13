@@ -311,6 +311,21 @@ body {
   filter: drop-shadow(0 0 16px rgba(190, 164, 83, 0.16));
 }
 
+.header-brand-wrap {
+  position: relative;
+  isolation: isolate;
+}
+
+.header-brand-wrap::before {
+  position: absolute;
+  z-index: -1;
+  inset: -0.8rem -1.2rem;
+  border-radius: 50%;
+  background: radial-gradient(ellipse, rgba(151, 180, 131, 0.38) 0%, rgba(111, 145, 103, 0.22) 42%, transparent 74%);
+  content: "";
+  filter: blur(0.35rem);
+}
+
 .header-brand-logo {
   width: 9rem;
   height: 7.3rem;
@@ -319,6 +334,68 @@ body {
 .footer-brand-logo {
   width: 10rem;
   height: 8.1rem;
+}
+
+.service-marquee {
+  overflow: hidden;
+  width: 100%;
+  mask-image: linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent);
+}
+
+.service-marquee-track {
+  display: flex;
+  width: max-content;
+  animation: service-marquee-scroll 34s linear infinite;
+}
+
+.service-marquee:hover .service-marquee-track,
+.service-marquee:focus-within .service-marquee-track {
+  animation-play-state: paused;
+}
+
+.service-marquee-list {
+  display: flex;
+  flex: none;
+  align-items: center;
+  gap: 2rem;
+  padding: 0 2rem 0 0;
+  color: rgba(245, 243, 233, 0.9);
+  font-size: clamp(1.1rem, 1.7vw, 1.45rem);
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+}
+
+.service-marquee-list li {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.service-marquee-list li::after {
+  width: 0.38rem;
+  height: 0.38rem;
+  border-radius: 999px;
+  background: var(--brand-gold);
+  content: "";
+  opacity: 0.8;
+}
+
+@keyframes service-marquee-scroll {
+  to { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .service-marquee-track {
+    width: 100%;
+    animation: none;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .service-marquee-list[aria-hidden="true"] { display: none; }
+  .service-marquee { mask-image: none; }
+  .service-marquee-list { flex-wrap: wrap; justify-content: center; white-space: normal; }
 }
 
 [data-header].is-scrolled {
@@ -578,6 +655,7 @@ body {
   }
 
   [data-header] .container-x { height: 5rem; gap: 0.5rem; }
+  .header-brand-wrap::before { inset: -0.45rem -0.55rem; }
   .header-brand-logo { width: 5.5rem; height: 4.5rem; }
   .header-callout { padding-left: 0.42rem; }
   .header-callout span { font-size: 0.58rem; }
@@ -587,7 +665,6 @@ body {
   .availability { margin-bottom: 1rem; }
   .hero-visual, .hero-photo { min-height: 17rem; }
   .hero-photo { object-position: 70% center; }
-  .hero-service-strip { row-gap: 1.1rem; padding-bottom: 2.5rem; }
 }
 
 @media (min-width: 641px) and (max-width: 1023px) {

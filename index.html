@@ -55,7 +55,7 @@
     <header data-header class="fixed inset-x-0 top-0 z-50">
       <div class="container-x flex h-24 items-center justify-between">
         <!-- Logo complet de Canva, fond blanc transparent -->
-        <a href="#accueil" class="flex shrink-0 items-center" aria-label="Phénix Assainissement — accueil">
+        <a href="#accueil" class="header-brand-wrap flex shrink-0 items-center" aria-label="Phénix Assainissement — accueil">
           <img src="./phenix-logo.png" class="brand-logo header-brand-logo" alt="Phénix Assainissement" />
         </a>
 
@@ -163,12 +163,19 @@
           </div>
         </div>
 
-        <!-- Bandeau de confiance -->
+        <!-- Défilement des prestations -->
         <div class="container-x relative pb-16">
           <div class="hairline mb-10"></div>
-          <ul class="hero-service-strip grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
-            <li><span>01</span> Débouchage</li><li><span>02</span> Entretien réseaux</li><li><span>03</span> Vidange fosses</li><li><span>04</span> Pompage</li><li><span>05</span> Curage</li><li><span>06</span> Inspection caméra</li>
-          </ul>
+          <div class="service-marquee" aria-label="Nos services : débouchage, entretien des réseaux, vidange de fosses, pompage, curage et inspection caméra">
+            <div class="service-marquee-track">
+              <ul class="service-marquee-list">
+                <li>Débouchage</li><li>Entretien des réseaux</li><li>Vidange de fosses</li><li>Pompage</li><li>Curage</li><li>Inspection caméra</li>
+              </ul>
+              <ul class="service-marquee-list" aria-hidden="true">
+                <li>Débouchage</li><li>Entretien des réseaux</li><li>Vidange de fosses</li><li>Pompage</li><li>Curage</li><li>Inspection caméra</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </section>
 
