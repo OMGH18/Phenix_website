@@ -496,6 +496,14 @@ body {
   pointer-events: none;
 }
 
+@media (min-width: 1024px) {
+  .hero-visual,
+  .hero-photo {
+    aspect-ratio: 6 / 5;
+    min-height: 29rem;
+  }
+}
+
 #services,
 #process,
 #avis,
@@ -563,6 +571,14 @@ body {
   .hero-visual, .hero-photo { min-height: 17rem; }
   .hero-photo { object-position: 70% center; }
   .hero-service-strip { row-gap: 1.1rem; padding-bottom: 2.5rem; }
+}
+
+@media (min-width: 641px) and (max-width: 1023px) {
+  .hero-visual,
+  .hero-photo {
+    aspect-ratio: 3 / 2;
+    min-height: 22rem;
+  }
 }
 
 @media (max-width: 400px) {
