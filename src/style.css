@@ -321,7 +321,7 @@ body {
   z-index: -1;
   inset: -0.55rem -0.9rem;
   border-radius: 50%;
-  background: radial-gradient(ellipse, rgba(205, 208, 166, 0.9) 0%, rgba(157, 179, 132, 0.72) 38%, rgba(93, 132, 83, 0.28) 66%, transparent 82%);
+  background: radial-gradient(ellipse, rgba(207, 216, 181, 0.98) 0%, rgba(172, 190, 148, 0.92) 45%, rgba(117, 153, 107, 0.55) 68%, transparent 88%);
   content: "";
   opacity: 0;
   pointer-events: none;
