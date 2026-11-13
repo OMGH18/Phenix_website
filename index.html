@@ -86,9 +86,9 @@
         </nav>
 
         <div class="flex items-center gap-3">
-          <a href="tel:+33123456789" class="btn-primary hidden sm:inline-flex">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-4 w-4"><path stroke-linecap="round" stroke-linejoin="round" d="M2.5 5.5c0 8.3 6.7 15 15 15 .8 0 1.5-.7 1.5-1.5v-2.6c0-.7-.5-1.3-1.2-1.5l-3-.6c-.6-.1-1.2.1-1.5.6l-.8 1.1a11.6 11.6 0 0 1-5.1-5.1l1.1-.8c.5-.3.7-.9.6-1.5l-.6-3C8.4 4.5 7.8 4 7.1 4H4.5C3.7 4 3 4.7 3 5.5Z"/></svg>
-            <span>Urgence 24/7</span>
+          <a href="tel:+33123456789" class="header-phone" aria-label="Appeler le 01 23 45 67 89">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M2.5 5.5c0 8.3 6.7 15 15 15 .8 0 1.5-.7 1.5-1.5v-2.6c0-.7-.5-1.3-1.2-1.5l-3-.6c-.6-.1-1.2.1-1.5.6l-.8 1.1a11.6 11.6 0 0 1-5.1-5.1l1.1-.8c.5-.3.7-.9.6-1.5l-.6-3C8.4 4.5 7.8 4 7.1 4H4.5C3.7 4 3 4.7 3 5.5Z"/></svg>
+            <span>01 23 45 67 89</span>
           </a>
           <!-- Bouton menu mobile -->
           <button
@@ -121,7 +121,6 @@
            HERO
            ============================================================ -->
       <section id="accueil" class="relative overflow-hidden bg-navy-950 bg-aurora">
-        <div class="absolute inset-0 grid-lines" aria-hidden="true"></div>
         <!-- Blobs décoratifs -->
         <div data-parallax="0.12" class="parallax-orb pointer-events-none absolute -left-40 top-20 h-96 w-96 rounded-full bg-ember-500/20 blur-3xl" aria-hidden="true"></div>
         <div data-parallax="-0.08" class="parallax-orb pointer-events-none absolute -right-40 top-40 h-96 w-96 rounded-full bg-aqua-500/20 blur-3xl" aria-hidden="true"></div>
@@ -129,10 +128,10 @@
         <div class="container-x relative grid gap-16 pb-24 pt-36 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:pb-32 lg:pt-44">
           <!-- Texte -->
           <div>
-            <span class="section-kicker reveal">
-              <span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span>
-              Disponible maintenant · Urgences 24h/24
-            </span>
+            <div class="availability reveal" aria-label="Disponible maintenant, 24 heures sur 24 et 7 jours sur 7">
+              <span>Disponible maintenant</span>
+              <strong>24 h/24 <i>·</i> 7 j/7</strong>
+            </div>
             <h1 class="reveal mt-6 font-display text-4xl font-extrabold leading-[1.05] text-white sm:text-5xl lg:text-6xl" data-delay="80">
               L'assainissement<br />
               en toute <span class="text-gradient">sérénité.</span>
@@ -161,26 +160,15 @@
           <!-- Carte visuelle -->
           <div class="reveal relative" data-delay="200">
             <div class="glass-card overflow-hidden !p-0">
-              <div class="hero-visual relative flex aspect-[4/3] items-center justify-center overflow-hidden">
-                <div class="hero-art-glow" aria-hidden="true"></div>
-                <div class="hero-art-label"><span class="hero-art-dot"></span> L'expertise Phénix</div>
-                <svg class="hero-truck" viewBox="0 0 720 500" fill="none" role="img" aria-labelledby="truck-title truck-desc">
-                  <title id="truck-title">Illustration d'un camion d'assainissement Phénix</title>
-                  <desc id="truck-desc">Un camion vert et or stylisé devant des cercles évoquant l'eau et les réseaux.</desc>
-                  <defs>
-                    <linearGradient id="truckBody" x1="190" y1="220" x2="550" y2="390" gradientUnits="userSpaceOnUse"><stop stop-color="#f7f2df"/><stop offset="1" stop-color="#d7d0b8"/></linearGradient>
-                    <linearGradient id="tankBody" x1="245" y1="170" x2="470" y2="300" gradientUnits="userSpaceOnUse"><stop stop-color="#f6d77d"/><stop offset="1" stop-color="#bd8d22"/></linearGradient>
-                    <linearGradient id="cabBody" x1="478" y1="240" x2="602" y2="350" gradientUnits="userSpaceOnUse"><stop stop-color="#2f6549"/><stop offset="1" stop-color="#102f22"/></linearGradient>
-                  </defs>
-                  <circle cx="370" cy="256" r="187" stroke="#d4ad45" stroke-opacity=".14" stroke-width="1.5"/><circle cx="370" cy="256" r="145" stroke="#9fbd99" stroke-opacity=".16" stroke-width="1.5"/><circle cx="370" cy="256" r="103" stroke="#d4ad45" stroke-opacity=".18" stroke-width="1.5"/>
-                  <path d="M109 382h500" stroke="#e6dcae" stroke-opacity=".34" stroke-width="2" stroke-linecap="round"/>
-                  <path d="M197 213c0-24 20-44 44-44h187c24 0 44 20 44 44v132H197V213Z" fill="url(#tankBody)" stroke="#f7e4a6" stroke-width="3"/><path d="M197 258h275v66H197z" fill="#245039"/><path d="M216 214c0-14 11-25 25-25h186c14 0 25 11 25 25v28H216v-28Z" stroke="#fff4ca" stroke-opacity=".72" stroke-width="3"/>
-                  <path d="M485 244h78l54 57v44H470v-69c0-18 7-32 15-32Z" fill="url(#cabBody)" stroke="#80a18a" stroke-width="3"/><path d="M515 258h39l37 39h-76v-39Z" fill="#b8d3c4"/><path d="M589 310h28" stroke="#d4ad45" stroke-width="5" stroke-linecap="round"/>
-                  <circle cx="271" cy="354" r="33" fill="#081d14" stroke="#d4ad45" stroke-width="7"/><circle cx="271" cy="354" r="11" fill="#d9c36f"/><circle cx="541" cy="354" r="33" fill="#081d14" stroke="#d4ad45" stroke-width="7"/><circle cx="541" cy="354" r="11" fill="#d9c36f"/>
-                  <path d="M344 277c-4 17-15 29-31 37 16 2 29-3 42-14 3 19-9 34-26 45 23 3 43-10 54-28 8-14 6-30-4-46-3 17-14 24-25 28 8-11 11-24 6-37-2 7-7 12-16 15Z" fill="#f7e2a1"/><path d="M220 327h223" stroke="#d4ad45" stroke-width="5" stroke-linecap="round"/>
-                  <path d="M153 381c31 10 53 10 77 0m245 0c31 10 53 10 77 0" stroke="#d4ad45" stroke-opacity=".6" stroke-width="2" stroke-linecap="round"/>
-                </svg>
-                <div class="hero-art-caption"><span>Phénix</span><span>Assainissement</span></div>
+              <div class="hero-visual relative overflow-hidden">
+                <img
+                  class="hero-photo"
+                  src="./hero-intervention.webp"
+                  alt="Technicien en intervention sur un réseau d'assainissement, équipé d'un flexible d'inspection"
+                  fetchpriority="high"
+                  decoding="async"
+                />
+                <div class="hero-photo-shade" aria-hidden="true"></div>
               </div>
             </div>
 
@@ -420,8 +408,7 @@
           <!-- Carte stylisée (placeholder) -->
           <div class="reveal" data-delay="120">
             <div class="glass-card relative flex aspect-square items-center justify-center overflow-hidden !p-0">
-              <div class="absolute inset-0 grid-lines opacity-70"></div>
-              <div class="absolute inset-0 bg-gradient-to-br from-aqua-500/10 to-ember-500/10"></div>
+              <div class="absolute inset-0 bg-gradient-to-br from-navy-700/55 to-ember-500/10"></div>
               <!-- Pings -->
               <span class="absolute left-1/2 top-1/2 h-4 w-4 -translate-x-1/2 -translate-y-1/2 rounded-full bg-ember-500 shadow-glow"></span>
               <span class="absolute left-1/2 top-1/2 h-4 w-4 -translate-x-1/2 -translate-y-1/2 animate-ping rounded-full bg-ember-500/70"></span>
