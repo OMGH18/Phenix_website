@@ -304,6 +304,33 @@ body {
   max-width: 86rem;
 }
 
+.brand-logo-shell {
+  display: grid;
+  flex: none;
+  place-items: center;
+  overflow: hidden;
+  padding: 0.25rem;
+  border-radius: 0.7rem;
+  background: #dcecdf;
+}
+
+.header-logo-shell {
+  width: 7.5rem;
+  height: 6rem;
+}
+
+.footer-logo-shell {
+  width: 9rem;
+  aspect-ratio: 1.23;
+}
+
+.brand-logo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
 [data-header].is-scrolled {
   background-color: rgba(8, 29, 20, 0.92);
   border-color: rgba(215, 184, 90, 0.16);
@@ -561,7 +588,7 @@ body {
   }
 
   [data-header] .container-x { height: 5rem; gap: 0.5rem; }
-  [data-header] .brand-logo { height: 3.75rem; }
+  .header-logo-shell { width: 4.5rem; height: 3.75rem; }
   .header-callout { padding-left: 0.42rem; }
   .header-callout span { font-size: 0.58rem; }
   .header-callout strong { font-size: 0.53rem; }
